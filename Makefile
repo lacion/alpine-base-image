@@ -1,6 +1,6 @@
 .PHONY: default help build tag push
 
-IMAGE_NAME   := kitabisa/alpine-base-image
+IMAGE_NAME := kitabisa/alpine-base-image
 
 default: help
 
