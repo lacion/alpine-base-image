@@ -14,10 +14,10 @@ help:
 	@echo
 
 build:
-	docker build -t $(IMAGE_NAME):local .
+	docker build -t $(IMAGE_NAME):local-awscli .
 
 tag:  build
-	docker tag $(IMAGE_NAME):local $(IMAGE_NAME):latest-awscli
+	docker tag $(IMAGE_NAME):local-awscli $(IMAGE_NAME):latest-awscli
 
 push: tag
 	docker push $(IMAGE_NAME):latest-awscli
