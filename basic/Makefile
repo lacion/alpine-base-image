@@ -14,10 +14,10 @@ help:
 	@echo
 
 build:
-	docker build -t $(IMAGE_NAME):local .
+	docker build -t ${IMAGE_NAME}:local .
 
 tag:  build
-	docker tag $(IMAGE_NAME):local $(IMAGE_NAME):latest
+	docker tag ${IMAGE_NAME}:local ${IMAGE_NAME}:latest
 
 push: tag
-	docker push $(IMAGE_NAME):latest
+	docker push ${IMAGE_NAME}:latest
