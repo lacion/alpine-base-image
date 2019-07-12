@@ -8,6 +8,7 @@ RUN apk add --no-cache --update \
     ca-certificates \
     tzdata \
     openssl && \
-    cp /usr/share/zoneinfo/$TZ /etc/localtime && \
-	echo $TZ > /etc/timezone && \
     rm -rf /var/cache/apk/*
+    
+RUN cp /usr/share/zoneinfo/$TZ /etc/localtime && \
+	echo $TZ > /etc/timezone
